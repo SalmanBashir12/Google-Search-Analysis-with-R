@@ -1,0 +1,2 @@
+This project is about the analysis of google search of machine learning.
+Here I will be analyzing the Google search trends on the queries based on “Machine Learning”, so let’s create a DataFrame of the top 10 countries which search for “Machine Learning” on Google using R.
