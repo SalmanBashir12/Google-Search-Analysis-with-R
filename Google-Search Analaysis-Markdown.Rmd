@@ -32,9 +32,34 @@ data <- gtrends(keyword = "machine learning")$interest_by_country
 data <- na.omit(data)
 head(data,10)
 ```
-## Including Plots
 
-You can also embed plots, for example:
+-Plotting the graph from the obtain data and converting the no useable columns
+-Study material site as reference: https://ggplot2.tidyverse.org/articles/ggplot2-specs.html
+-Study material site as reference: https://medium.com/@chrisBow/a-selection-of-themes-for-ggplot2-547f904f0e7f
+```{r}
+plot<-ggplot(data=head(data,10), aes(x=reorder(location,-hits),, y=hits,group=keyword,col=keyword))+
+  geom_bar(stat = 'identity')+ labs(countryName ="geoName", Keyword = "machine learning")+
+  theme(axis.text.x = element_text(angle = 45,vjust = 0.5, hjust=0.5))
+plot
+```
+-now plotting the extracted information to make it more visualized for a laymen
+
+- removing columns which are of no need-
+```{r}
+  data <- gtrends(keyword = "Machine Learning")$interest_over_time
+  data = data[-c(3:7)]
+  data
+```
+```{r}
+ggplot(data=data, 
+       aes(x=date, y=hits)) +
+  geom_line(stat="identity")+ 
+  labs(title="Total Google Searches for Machine Learning",
+       x = "Year", 
+       y = "Total Count")+
+  theme_minimal()
+
+```
 
 ```{r pressure, echo=FALSE}
 plot(pressure)
