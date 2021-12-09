@@ -56,8 +56,7 @@ ggplot(data=data,
   geom_line(stat="identity")+ 
   labs(title="Total Google Searches for Machine Learning",
        x = "Year", 
-       y = "Total Count")+
-  theme_minimal()
+       y = "Total Count")
 
 ```
 
