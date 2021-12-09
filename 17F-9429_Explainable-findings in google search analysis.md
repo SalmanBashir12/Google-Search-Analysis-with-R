@@ -1,0 +1,1 @@
+In the google search analysis of machine learning first of all the 10 countries were targeted to check the machine learning search on google. Number of hits against the specific country. According to the total count graph number of hits(Searches about ML) raised to the peak in 2020 during covid. China is the country with most hits of ML.
